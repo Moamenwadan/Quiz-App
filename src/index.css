@@ -1,0 +1,278 @@
+body {
+  /* margin: 0; */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #343a40;
+  color: #f1f3f5;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@media (min-width: 576px) {
+  .app {
+    margin-top: 70px;
+  }
+  .header {
+    /* border: 2px solid red; */
+    font-size: 1.3rem;
+    width: 90%;
+    text-align: center;
+    margin: 25px auto;
+  }
+  .header h1 {
+    font-family: "Codystar";
+    font-size: 4rem;
+  }
+  .ready h3 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 15px 0;
+  }
+  .ready p {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  .loader-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4rem;
+    gap: 1.6rem;
+    color: #ced4da;
+    font-size: 1.4rem;
+  }
+  .loader {
+    width: 50px;
+    height: 24px;
+    background: radial-gradient(circle closest-side, currentColor 90%, #0000) 0%
+        50%,
+      radial-gradient(circle closest-side, currentColor 90%, #0000) 50% 50%,
+      radial-gradient(circle closest-side, currentColor 90%, #0000) 100% 50%;
+    background-size: calc(100% / 3) 12px;
+    background-repeat: no-repeat;
+    animation: loader 1s infinite linear;
+  }
+  @keyframes loader {
+    20% {
+      background-position: 0% 0%, 50% 50%, 100% 50%;
+    }
+    40% {
+      background-position: 0% 100%, 50% 0%, 100% 50%;
+    }
+    60% {
+      background-position: 0% 50%, 50% 100%, 100% 0%;
+    }
+    80% {
+      background-position: 0% 50%, 50% 50%, 100% 100%;
+    }
+  }
+  .error {
+    text-align: center;
+    background-color: white;
+    width: 65%;
+    padding: 15px;
+    border-radius: 20px;
+    margin: 5px auto;
+  }
+  .startscreen {
+    text-align: center;
+  }
+  .startscreen button {
+    padding: 15px;
+    margin: 25px 0;
+    background-color: #495057;
+    border: 2px solid #495057;
+    color: whitesmoke;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    width: 120px;
+    cursor: pointer;
+    /* border: none; */
+    outline: none;
+  }
+  .startscreen button:hover {
+    background-color: #343a40;
+  }
+  .gauge {
+    /* border: 2px solid blue; */
+    width: 70%;
+    margin: 5px auto;
+    text-align: center;
+  }
+  .gauge progress {
+    /* width: 500px; */
+    width: 80%;
+    height: 20px;
+    text-align: center;
+    /* margin: ; */
+  }
+  .paragraphs {
+    display: flex;
+    justify-content: space-around;
+    /* margin-left: ; */
+  }
+  .questions {
+    /* border: 2px solid pink; */
+    width: 60%;
+    margin: 10px auto;
+    text-align: center;
+  }
+  .questions p {
+    margin-top: 25px;
+    font-size: 1.8rem;
+    font-style: italic;
+  }
+  .questions .buttons {
+    /* border: 2px solid blue; */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    /* width: 100%; */
+    flex-wrap: wrap;
+  }
+  .option {
+    width: 500px;
+    margin-top: 15px;
+    padding: 15px;
+    /* border-radius: 20px; */
+    font-size: 1.2rem;
+    color: #f1f3f5;
+    background-color: #343a40;
+    border: 2px solid #495057;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 1.3rem;
+    cursor: "pointer";
+  }
+
+  .move-element {
+    transform: translateX(30px);
+  }
+
+  .option:hover {
+    background-color: #495057;
+  }
+  .correct {
+    background-color: #1098ad;
+    border: 2px solid #1098ad;
+    color: #f1f3f5;
+  }
+  .correct:hover {
+    background-color: #1098ad;
+    border: 2px solid #1098ad;
+    color: #f1f3f5;
+  }
+  .wrong {
+    background-color: #ffa94d;
+    border: 2px solid #ffa94d;
+    color: #343a40;
+  }
+  .wrong:hover {
+    background-color: #ffa94d;
+    border: 2px solid #ffa94d;
+    color: #343a40;
+  }
+  footer {
+    width: 70%;
+    margin: 10px auto;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+  }
+  footer button {
+    display: block;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: #343a40;
+    border: 2px solid #495057;
+    color: #f1f3f5;
+    width: 100px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    /* margin-right: 400px; */
+  }
+  footer button:hover {
+    background-color: #495057;
+    font-size: 1.2rem;
+  }
+  .finishScrenn {
+    text-align: center;
+    background-color: #1098ad;
+    width: 550px;
+    margin: 75px auto 20px auto;
+    padding: 20px;
+    border-radius: 30px;
+    font-size: 1.3rem;
+  }
+  .highestScore {
+    text-align: center;
+    font-size: 1.3rem;
+  }
+  .restart {
+    display: block;
+    margin: 20px auto;
+    padding: 15px;
+    color: #f1f3f5;
+    background-color: #343a40;
+    border: 2px solid #495057;
+    cursor: pointer;
+    border-radius: 20px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    width: 120px;
+  }
+  .restart:hover {
+    background-color: #495057;
+  }
+}
+@media (min-width: 756px) {
+  .error {
+    width: 40%;
+  }
+  .gauge {
+    /* border: 2px solid blue; */
+    width: 60%;
+  }
+  .gauge progress {
+    width: 70%;
+  }
+}
+@media (min-width: 992px) {
+  /* .progress progress {
+    width: 00px;
+  } */
+  .gauge {
+    /* border: 2px solid blue; */
+    width: 50%;
+  }
+  .gauge progress {
+    width: 65%;
+  }
+  .finishScrenn {
+    width: 700px;
+  }
+  footer {
+    width: 40%;
+    margin: 10px auto;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1200px) {
+  /* .progress progress {
+    width: 650px;
+  } */
+}
